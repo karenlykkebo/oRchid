@@ -5,7 +5,7 @@ library(ggpubr)
 
 
 temp_got <- st_read("./raw_data/gotland_shp_temp.shp")
-usethis::use_data(temp_got)
+usethis::use_data(temp_got, overwrite = T)
 
 
 gtempWrap<-function(my_df,x1,y1,y2){
