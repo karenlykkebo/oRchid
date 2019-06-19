@@ -22,7 +22,7 @@ gtempWrap<-function(my_df,x1,y1,y2){
 
 }
 
-gtempWrap(temp_got,"avgyear","year","2000")
+#gtempWrap(temp_got,"avgyear","year","2000")
 
 
 
@@ -46,4 +46,4 @@ gtemp_anim<-function(my_df,x1,y1,y2){
 
 }
 
-gtemp_anim(temp_got,"avgyear","year","2000")
+#gtemp_anim(temp_got,"avgyear","year","2000")

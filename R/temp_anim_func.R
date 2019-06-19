@@ -12,7 +12,6 @@
 #' gtemp_anim(temp_got,"avgyear","year","2000")
 #'
 #'
-
 gtemp_anim<-function(my_df,x1,y1,y2){
   require(ggplot2)
   require(ggpubr)
