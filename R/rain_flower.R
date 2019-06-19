@@ -1,7 +1,15 @@
-
-
-
-
+#' A map of Gotland with Orchid genus and rain fall
+#'
+#' A map of Gotland with Orchid genus and rain fall
+#'
+#' This function makes a map of orchid genus's in Gotland and makes a denisty plot of rain fall for that same year.
+#' @section Warning:
+#' Might work, might not. We hope so
+#'
+#' @param x1 insert year
+#'
+#' @example flowerp(2015)
+#'
 flowerp <- function(x1) {
 require(ggplot2)
 require(egg)
