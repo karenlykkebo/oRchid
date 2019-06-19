@@ -4,8 +4,7 @@ Title: This package is using data of orchid observation on Gotland, rainfall and
 Version: 0.1.0
 Author: Karen, Ditte, Camilla - RaukR 2019
 Maintainer: The package maintainer <yourself@somewhere.net>
-Description: This is just a small practice group project.    
-There are three functions that create differenct maps of orchid distribution and environmental data.
+Description: This is just a small practice group project. There are three functions that create differenct maps of orchid distribution and environmental data.
 License: No license
 Encoding: UTF-8
 LazyData: true
