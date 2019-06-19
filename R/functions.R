@@ -36,7 +36,6 @@ require(Hmisc)
     geom_point(aes_string(x1, y1, col = z1), size = 3, alpha = 0.8) +
     theme_bw() +
     labs(x = "Longitude", y = "Latitude", col = capitalize(z1))
-
 }
 
 # Save data
