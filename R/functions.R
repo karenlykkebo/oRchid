@@ -25,8 +25,7 @@ library(roxygen2)
 #' @param y1 Latitude
 #' @param z1 Observation to color by, example Species, Genus, Temperature etc.
 #'
-#' @example
-#' orchid %>% orchidmap("decimalLongitude", "decimalLatitude", "species")
+#' @example orchid %>% orchidmap("decimalLongitude", "decimalLatitude", "species")
 #'
 orchidsmap <- function(my_df, x1, y1, z1) {
 require(ggplot2)
@@ -40,14 +39,26 @@ require(Hmisc)
 
 }
 
-
 # Save data
+# Orchids
+orchids1 <- fread("./data/orchidsgotland.csv")
+# clean up dataframe
+got_orchids <- orchids1 %>%
+  rename("lat" = "decimalLatitude",
+         "long" = "decimalLongitude") %>%
+  select(-c(1:3, 11:14, 16, 19:24, 29:45))
 
-orchids <- fread("./data/orchidsgotland.csv")
+# Rain
+got_rain <- fread("./data/rain_gotland.csv")
+
+# Shapefile
 gotland <- st_read("./data/gotland.shp")
 
-usethis::use_data(orchids, overwrite = T)
+# Save to package
+usethis::use_data(got_orchids, overwrite = T)
 usethis::use_data(gotland, overwrite = T)
+usethis::use_data(got_rain, overwrite = T)
+
 
 
 
