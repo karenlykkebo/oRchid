@@ -13,6 +13,7 @@
 flowerp <- function(x1) {
 require(ggplot2)
 require(egg)
+require(dplyr)
 
 plot1 <- got_orchids %>%
     filter(year == x1) %>%
@@ -34,6 +35,6 @@ ggarrange(plot1, rainp, nrow = 1)
 
 }
 
-#flowerp(2015)
+flowerp(2015)
 
 
