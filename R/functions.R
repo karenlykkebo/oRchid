@@ -11,8 +11,23 @@
 # LIBRARIES
 library(data.table)
 library(sf)
+library(roxygen2)
 
-# Function to make simple map with color dots
+#' A map of Gotland with Orchid observations
+#'
+#' A map of Gotland with Orchid observations
+#'
+#' This function makes a map of Gotland and adds latitude and longitude data points of some observation.
+#' @section Warning:
+#' Might work, might not. We hope so
+#' @param my_df A data frame
+#' @param x1 Longitude
+#' @param y1 Latitude
+#' @param z1 Observation to color by, example Species, Genus, Temperature etc.
+#'
+#' @example
+#' orchid %>% orchidmap("decimalLongitude", "decimalLatitude", "species")
+#'
 orchidsmap <- function(my_df, x1, y1, z1) {
 require(ggplot2)
 require(Hmisc)
