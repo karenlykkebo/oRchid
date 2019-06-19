@@ -40,7 +40,7 @@ require(Hmisc)
 
 # Save data
 # Orchids
-orchids1 <- fread("./data/orchidsgotland.csv")
+orchids1 <- fread("./data/orchidsgotland.csv", header = T, sep = ";")
 # clean up dataframe
 got_orchids <- orchids1 %>%
   rename("lat" = "decimalLatitude",
@@ -48,7 +48,7 @@ got_orchids <- orchids1 %>%
   select(-c(1:3, 11:14, 16, 19:24, 29:45))
 
 # Rain
-got_rain <- fread("./data/rain_gotland.csv")
+got_rain <- fread("./data/rain_gotland.csv",header = T, sep = ";")
 
 # Shapefile
 gotland <- st_read("./data/gotland.shp")
