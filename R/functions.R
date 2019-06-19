@@ -10,10 +10,12 @@
 
 # LIBRARIES
 library(data.table)
+library(sf)
 
 # Function to make simple map with color dots
 orchidsmap <- function(my_df, x1, y1, z1) {
 require(ggplot2)
+require(Hmisc)
 
   ggplot(my_df) +
     geom_sf(data = gotland) +
@@ -27,8 +29,10 @@ require(ggplot2)
 # Save data
 
 orchids <- fread("./data/orchidsgotland.csv")
+gotland <- st_read("./data/gotland.shp")
 
-usethis::use_data(orchids)
+usethis::use_data(orchids, overwrite = T)
+usethis::use_data(gotland, overwrite = T)
 
 
 
